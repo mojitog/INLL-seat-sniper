@@ -54,7 +54,7 @@ def main() -> None:
     while True:
         try:
             sessions = run_check()
-            available = [s for s in sessions if s.get("availability") == "available"]
+            available = [s for s in sessions if s.get("availability") == "unavailable"]
             if available:
                 handle_available(available)
         except Exception as exc:
